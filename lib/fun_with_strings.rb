@@ -30,7 +30,9 @@ module FunWithStrings
 
     word_arr.each do |word|
       x = word.split('').sort.join
-      ana_arr[x] ||= []
+      if ana_arr[x] == nil
+        ana_arr[x] = []
+      end
       ana_arr[x] << word
     end
 
